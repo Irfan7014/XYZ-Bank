@@ -1,0 +1,31 @@
+.customer-account-data {
+    background-color: #fff;
+    margin: 0 auto;
+    text-align: left;
+    border-radius: 5px;
+    height: 100px;
+    min-height: 100px;
+    min-width: 300px;
+    max-width: 750px;
+    padding-top: 15px;
+    margin-top: 20px;
+}
+
+#customer-account-no {
+    display: inline;
+    margin-left: 10px;
+}
+
+.account-data {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.make-it-red {
+    color: red;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 15px;
+    min-width: 300px;
+    max-width: 750px;
+}

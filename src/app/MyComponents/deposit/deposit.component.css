@@ -1,0 +1,16 @@
+.deposit-amount {
+    background-color: #fff;
+    margin: 0 auto;
+    text-align: left;
+    border-radius: 5px;
+    height: 100px;
+    min-height: 100px;
+    min-width: 300px;
+    max-width: 750px;
+    padding-top: 15px;
+    margin-top: 7px;
+}
+
+.btn-deposit-amount {
+    margin-top: 15px;
+}

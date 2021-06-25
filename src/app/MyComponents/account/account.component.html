@@ -1,0 +1,24 @@
+<app-header-logout></app-header-logout>
+<div class="customer-account-data">
+    <h6 style="display:inline;"><strong>Welcome </strong></h6>
+    <h3 style="display:inline;"><strong>{{this.fName}} {{this.lName}}</strong></h3>
+    <h6 style="display:inline;"> !!</h6>
+    <select id="customer-account-no" name="customer" (change)="selectAAccount($event)">
+        <option *ngFor=" let acc of this.accounts " value={{acc.accNo}}>{{acc.accNo}}</option>
+    </select>
+    <div class="account-data">
+        <h6 class="display-title">Account Number : <strong>{{this.selectedAccount}}</strong> , Balance : <strong>{{this.selectedAccountBalance}}</strong> , Currency : <strong>{{this.selectedAccountCurrency}}</strong></h6>
+    </div>
+</div>
+<app-customer-tasks (withdrawOrDepositOrTransact)="selectTask($event)"></app-customer-tasks>
+<h3 [hidden]="moreWithdrawl" class="make-it-red">Transaction Failed. You can not withdraw amount more than the balance or Negative Amount.</h3>
+<h3 [hidden]="negativeDeposit" class="make-it-red">Transaction Failed. You can not deposit negative/Zero amount.</h3>
+<h3 [hidden]="successTrans" class="make-it-red">Transaction Successful!</h3>
+<div class="account-section">
+    <ng-template [ngIf]="this.selectedTask=='deposit'">
+        <app-deposit (sendAmount)="addAmountToAccount($event)" (sendType)="addTypeToTransaction($event)"></app-deposit>>
+    </ng-template>
+    <ng-template [ngIf]="this.selectedTask=='withdraw' ">
+        <app-withdraw (sendAmount)="deductAmountFromAccount($event)" (sendType)="addTypeToTransaction($event)"></app-withdraw>
+    </ng-template>
+</div>

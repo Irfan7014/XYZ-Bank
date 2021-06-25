@@ -1,0 +1,43 @@
+/*Div Login Buttons*/
+
+.man-login-button,
+.cus-login-button {
+    display: block;
+    padding: 10px 16px;
+}
+
+.man-login-button {
+    margin-top: 2.5%;
+    margin-bottom: 40%;
+}
+
+.cus-login-button {
+    margin-top: 3%;
+}
+
+.select-login {
+    background-color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    height: 400px;
+    min-height: 100px;
+    min-width: 300px;
+    max-width: 750px;
+}
+
+.cus-btn {
+    margin-top: 8px;
+    background-color: #337ab7;
+    text-align: center;
+}
+
+.man-btn {
+    width: 220px;
+    background-color: #337ab7;
+}
+
+.man-btn:hover,
+.cus-btn:hover {
+    background-color: #2e6da7;
+}

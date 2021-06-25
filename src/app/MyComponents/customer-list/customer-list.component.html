@@ -1,0 +1,38 @@
+<app-header></app-header>
+<app-manager-tasks></app-manager-tasks>
+<div class="customer-table">
+    <div class="input-group search-cus">
+        <input type="text" class="form-control ng-pristine ng-valid ng-touched search-bar" placeholder="Search Customer" ng-model="searchCustomer">
+    </div>
+    <table class="table table-light table-bordered table-striped cust-table">
+        <thead>
+            <tr>
+                <th scope="col">
+                    <a class="link" (click)="changeSortData('fName')">First Name</a>
+                </th>
+                <th scope="col">
+                    <a class="link" (click)="changeSortData('lName')">Last Name</a>
+                </th>
+                <th scope="col">
+                    <a class="link" (click)="changeSortData('postCode')">Post Code</a>
+                </th>
+                <th scope="col">Account Number</th>
+                <th scope="col">Delete Customer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let cus of this.customers | sort : sortColumn: this.reverseSort">
+                <tr>
+                    <td>{{cus.fName}}</td>
+                    <td>{{cus.lName}}</td>
+                    <td>{{cus.postCode}}</td>
+                    <td>
+                        <p *ngFor="let account of cus.accounts" style="display:inline">{{account.accNo}} </p>
+                    </td>
+                    <td><button class="btn btn-dark" (click)="deleteCustomer(cus)">Delete</button>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

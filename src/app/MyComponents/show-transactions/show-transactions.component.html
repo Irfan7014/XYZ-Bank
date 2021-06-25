@@ -1,0 +1,27 @@
+<app-header-logout></app-header-logout>
+<div class="show-transaction">
+    <button class="btn btn-dark btn-md go-back-btn" (click)="goToAccountPage('account')">Back</button>
+    <button class="btn btn-dark btn-md reset-btn" (click)="resetTransaction()">Reset</button>
+    <br><br>
+    <hr class="horizontal-line">
+    <table class="table table-light table-bordered table-striped trans-table">
+        <thead>
+            <tr>
+                <th scope="col">
+                    <a class="link" (click)="changeSortData()">Date-Time</a>
+                </th>
+                <th scope="col">Amount</th>
+                <th scope="col">Transaction Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let transaction of this.transactions | sorttransaction : this.reverseSort">
+                <tr>
+                    <td>{{transaction.date_time | date: 'medium'}}</td>
+                    <td>{{transaction.amount}}</td>
+                    <td>{{transaction.type}}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

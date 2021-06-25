@@ -1,0 +1,19 @@
+.select-customer {
+    background-color: #fff;
+    margin: 0 auto;
+    text-align: left;
+    border-radius: 5px;
+    height: 400px;
+    min-height: 100px;
+    min-width: 300px;
+    max-width: 750px;
+    padding-top: 15px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.btn-customer-login {
+    margin-top: 15px;
+}

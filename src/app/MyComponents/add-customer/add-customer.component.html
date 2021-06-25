@@ -1,0 +1,13 @@
+<app-header></app-header>
+<app-manager-tasks></app-manager-tasks>
+<div class="add-customer">
+    <form #addCust="ngForm" (ngSubmit)="onSubmit(addCust)">
+        <label class="form-label fName-label" for="fName">First Name : </label>
+        <input class="form-control fName-input" type="text" placeholder="First Name" [(ngModel)]="fName" id="fName" name="fName" required="">
+        <label class="form-label lName-label">Last Name : </label>
+        <input class="form-control lName-input" type="text" placeholder="Last Name" [(ngModel)]="lName" id="lName" name="lName" required="">
+        <label class="form-label pCode-label">Post Code : </label>
+        <input class="form-control pCode-input" type="text" placeholder="Post Code" [(ngModel)]="postCode" id="postCode" name="postCode" required="">
+        <button class="btn btn-dark btn-add-customer" type="submit">Add Customer</button>
+    </form>
+</div>

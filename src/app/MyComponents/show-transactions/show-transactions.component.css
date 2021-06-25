@@ -1,0 +1,38 @@
+.go-back-btn {
+    float: left;
+}
+
+.reset-btn {
+    float: right;
+    margin-right: 10px;
+}
+
+.horizontal-line {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 2px;
+}
+
+.show-transaction {
+    background-color: #fff;
+    margin: 0 auto;
+    text-align: left;
+    border-radius: 5px;
+    height: 350px;
+    min-height: 100px;
+    min-width: 300px;
+    max-width: 750px;
+    padding-top: 15px;
+    margin-top: 20px;
+    overflow: scroll;
+}
+
+.trans-table {
+    margin-top: 15px;
+    min-width: 300px;
+    max-width: 720px;
+    margin-left: 5px;
+    max-height: 750
+}

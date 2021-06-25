@@ -1,0 +1,18 @@
+.add-cus-btn,
+.open-acc-btn,
+.cus-btn {
+    margin-top: 15px;
+    background-color: #EFEFEF;
+    margin-right: 2px;
+}
+
+.select-option {
+    background-color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    height: 400px;
+    min-height: 100px;
+    min-width: 300px;
+    max-width: 750px;
+}

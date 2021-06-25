@@ -1,0 +1,7 @@
+<div class="withdraw-amount">
+    <form #withdrawAmount="ngForm" (ngSubmit)="onSubmit(withdrawAmount)">
+        <label class="form-label withdraw-amount-label"><strong>Amount to be Withdrawn : </strong></label>
+        <input class="form-control withdraw-amount-input" type="text" placeholder="amount" [(ngModel)]="amount" id="amount" name="amount" required="">
+        <button class="btn btn-dark btn-withdraw-amount" type="submit">Withdraw</button>
+    </form>
+</div>

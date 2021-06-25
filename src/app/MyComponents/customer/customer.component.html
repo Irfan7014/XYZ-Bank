@@ -1,0 +1,15 @@
+<app-header></app-header>
+<div class="select-customer">
+    <label class="form-label">Your Name : </label>
+    <select class="form-control" id="customer-login-name" name="customer" (change)="selectACustomer($event)">
+        <option value="default" selected="selected">---Your Name---</option>
+        <option *ngFor="let cus of customer" value = {{cus.fName}}-{{cus.lName}}>
+            {{cus.fName}} {{cus.lName}}    
+        </option>
+    </select>
+    <div *ngIf="this.selectedCustomer === 'default';  else elseBlock">
+    </div>
+    <ng-template #elseBlock>
+        <button class="btn btn-dark btn-customer-login" (click)="loggedIn('account')">Login</button>
+    </ng-template>
+</div>

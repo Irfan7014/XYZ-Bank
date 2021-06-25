@@ -1,0 +1,21 @@
+<app-header></app-header>
+<app-manager-tasks></app-manager-tasks>
+<div class="open-account">
+    <form #openAcc="ngForm" (ngSubmit)="onSubmit(openAcc)">
+        <label class="form-label">Customer : </label>
+        <select class="form-control" id="customer-name" name="customer" (change)="selectACustomer($event)">
+        <option value="default" selected="selected">---Customer Name---</option>
+        <option *ngFor="let cus of customer" value = {{cus.fName}}-{{cus.lName}}>
+            {{cus.fName}} {{cus.lName}}    
+        </option>
+    </select>
+        <label class="form-label">Currency : </label>
+        <select class="form-control" id="currency" name="currency" (change)="selectACurrency($event)">
+        <option value="default" selected="selected">---Currency---</option>
+        <option value="Dollar">Dollar</option>
+        <option value="Pound">Pound</option>
+        <option value="Rupee">Rupee</option>
+    </select>
+        <button class="btn btn-dark btn-process">Process</button>
+    </form>
+</div>
